@@ -139,7 +139,7 @@ int main()
 	// module request
 	int pid = 1234;
 	std::wstring module_name = L"GameAssembly.dll";
-	_KERNEL_MODULE_BASE_RESPONSE module_response = driver->moduleBase(pid, module_name.c_str());
+	KERNEL_MODULE_BASE_RESPONSE module_response = driver->moduleBase(pid, module_name.c_str());
 	if (module_response.Status != STATUS_SUCCESS) {
 		printf("error moduleBase! Status: 0x%p - %d, Address: 0x%p", module_response.Status, module_response.Status, module_response.Address);
 		return 0;
